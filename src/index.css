@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: var(--font-md);
+  line-height: 1.2;
+  font-family: Inter, sans-serif;
+  color: var(--color-primary);
+  background-color: var(--bg-body);
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+body.dark {
+  --bg-body: var(--bg-body-dark);
+  --color-primary: var(--color-primary-dark);
+  --bg-input: var(--bg-input-dark);
+  --bg-box: var(--bg-input-dark);
+}
+
+#root {
+  min-height: 100%;
+  padding: 60px 0;
+}
+
+:root {
+  --bg-body: #ffffff;
+  --bg-body-dark: #050505;
+
+  --bg-box: #e9e9e9;
+
+  --bg-input: #f9f9f9;
+  --bg-input-dark: #1f1f1f;
+
+  --color-white: #ffffff;
+
+  --color-primary: #2d2d2d;
+  --color-primary-dark: #ffffff;
+
+  --color-secondary: #757575;
+
+  --color-purple: #a445ed;
+  --color-tomato: #ff5252;
+
+  --font-md: clamp(1.5rem, 1.25vw, 2.2rem);
+  --font-lg: clamp(1.6rem, 1.39vw, 2.4rem);
+  --font-sm: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(3.2rem,4.45vw, 7.2rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem,1.67vw,2.8rem);
+}
+
+h3 {
+  font-size: clamp(1.8rem,1.39vw,2.4rem);
+}
+
+.container {
+  max-width: 770px;
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
