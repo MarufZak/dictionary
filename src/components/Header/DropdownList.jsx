@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { dropdownItems } from '../../utils/constants';
 
-const DropdownList = ({ opened,handleItemClick }) => {
+const DropdownList = ({ opened, handleItemClick }) => {
   return (
     <Wrapper opened={opened}>
       {dropdownItems.map((item, index) => {
@@ -29,14 +29,15 @@ const Wrapper = styled.div`
   visibility: ${(props) => (props.opened ? 'visible' : 'hidden')};
   transition: ${(props) => (props.opened ? '0.3s' : 0)};
   transform: translateX(-50%);
-  background-color: var(--color-secondary);
+  background-color: var(--bg-input);
   border-radius: 6px;
   padding: 0 10%;
   z-index: 1;
+  box-shadow: var(--shadow);
 
   .item {
     padding: 10px 0;
-    color: var(--color-white);
+    color: var(--color-primary);
   }
 `;
 

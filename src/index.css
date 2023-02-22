@@ -24,9 +24,12 @@ body {
 
 body.dark {
   --bg-body: var(--bg-body-dark);
-  --color-primary: var(--color-primary-dark);
   --bg-input: var(--bg-input-dark);
   --bg-box: var(--bg-input-dark);
+
+  --color-primary: var(--color-primary-dark);
+
+  --shadow: var(--shadow-dark);
 }
 
 #root {
@@ -53,21 +56,24 @@ body.dark {
   --color-purple: #a445ed;
   --color-tomato: #ff5252;
 
+  --shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0px 5px 30px var(--color-purple);
+
   --font-md: clamp(1.5rem, 1.25vw, 2.2rem);
   --font-lg: clamp(1.6rem, 1.39vw, 2.4rem);
   --font-sm: 1.5rem;
 }
 
 h1 {
-  font-size: clamp(3.2rem,4.45vw, 7.2rem);
+  font-size: clamp(3.2rem, 4.45vw, 7.2rem);
 }
 
 h2 {
-  font-size: clamp(1.8rem,1.67vw,2.8rem);
+  font-size: clamp(1.8rem, 1.67vw, 2.8rem);
 }
 
 h3 {
-  font-size: clamp(1.8rem,1.39vw,2.4rem);
+  font-size: clamp(1.8rem, 1.39vw, 2.4rem);
 }
 
 .container {

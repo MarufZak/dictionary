@@ -4,19 +4,23 @@ import Loading from '../generic/Loading';
 import Meanings from './Meanings';
 import Player from './Player';
 import Source from './Source';
+import Error from '../Error/Error';
 
-const Results = ({ data, isLoading }) => {
+const Results = ({ data, isLoading, error, isInputEmpty }) => {
   if (isLoading) {
     return <Loading />;
   }
 
-  if (data.length === 0) return;
+  if (error.state) {
+    return <Error message={error.message} />;
+  }
+  if (data.length === 0 || isInputEmpty) return;
 
   const { word, meanings, sourceUrls } = data;
   const phonetics = data.phonetic
     ? data.phonetic
-    : data.phonetics.find((item) => item.text).text;
-  const phoneticsAudio = data.phonetics.find((item) => item).audio;
+    : data.phonetics?.find((item) => item.text)?.text;
+  const phoneticsAudio = data.phonetics?.find((item) => item)?.audio;
 
   return (
     <Wrapper>
